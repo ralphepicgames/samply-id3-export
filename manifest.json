@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Samply ID3 Export",
+  "version": "2.0.0",
+  "description": "Download a Samply project with ID3 tags baked in",
+  "permissions": [
+    "scripting",
+    "storage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://samply.app/*",
+    "https://storage.googleapis.com/*",
+    "https://*.googleapis.com/*",
+    "https://*.firebaseapp.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://samply.app/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "panel.html",
+        "panel.js",
+        "id3.js",
+        "jszip.min.js",
+        "page.js"
+      ],
+      "matches": [
+        "https://samply.app/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
