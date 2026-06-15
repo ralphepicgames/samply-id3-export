@@ -5,7 +5,7 @@ Chrome extension. Export Samply projects as MP3s with ID3 tags. Downloads origin
 ## Features
 
 - ID3 tags: title, artist, album, year, track number, cover art
-- Original quality (320kbps — not Samply's re-encoded version)
+- Original quality (320kbps, not Samply's re-encoded version)
 - M3U playlist in zip
 - Works on any Samply project you own
 
